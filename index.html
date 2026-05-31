@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord HypeSquad House Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <!-- Sleek Animated Discord Icon -->
+                <svg class="discord-logo" viewBox="0 0 127.14 96.36" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c.89-.66,1.76-1.37,2.59-2.1a75.47,75.47,0,0,0,72.7,0c.83.73,1.7,1.44,2.59,2.1a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31-18.83C129,54.65,122.64,31.58,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.83,46,53.83,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.07,46,96.07,53,91,65.69,84.69,65.69Z"/>
+                </svg>
+            </div>
+            <h1>Discord HypeSquad Changer</h1>
+            <p class="subtitle">Change or remove your HypeSquad house instantly</p>
+        </header>
+
+        <main>
+            <!-- Feedback Notification Toast -->
+            <div id="toast" class="toast"></div>
+
+            <!-- Token input section -->
+            <div class="form-group">
+                <label for="discord-token">Your Discord Authorization Token</label>
+                <div class="input-container">
+                    <input type="password" id="discord-token" placeholder="Paste your token here (e.g., ODQzM...)" autocomplete="off">
+                    <button class="toggle-password" id="toggle-password" title="Show/Hide Token" aria-label="Show/Hide Token">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- HypeSquad House Selector Grid -->
+            <div class="form-group">
+                <label>Select your House</label>
+                <div class="houses-grid">
+                    <!-- Bravery -->
+                    <div class="house-card bravery" data-house-id="1" id="house-bravery">
+                        <span class="house-badge-icon">🔮</span>
+                        <div class="house-name">Bravery</div>
+                        <div class="house-desc">House of the brave and fearless.</div>
+                    </div>
+                    
+                    <!-- Brilliance -->
+                    <div class="house-card brilliance" data-house-id="2" id="house-brilliance">
+                        <span class="house-badge-icon">☀️</span>
+                        <div class="house-name">Brilliance</div>
+                        <div class="house-desc">House of the bright and hardworking.</div>
+                    </div>
+                    
+                    <!-- Balance -->
+                    <div class="house-card balance" data-house-id="3" id="house-balance">
+                        <span class="house-badge-icon">🌿</span>
+                        <div class="house-name">Balance</div>
+                        <div class="house-desc">House of the balanced and poised.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons Group -->
+            <div class="button-group">
+                <button class="action-btn" id="action-btn" disabled>
+                    <span class="spinner"></span>
+                    <span class="btn-text">Activate House</span>
+                </button>
+                <button class="action-btn secondary-btn" id="remove-btn" disabled>
+                    <span class="spinner remove-spinner"></span>
+                    <span class="btn-text">Leave HypeSquad</span>
+                </button>
+            </div>
+
+            <!-- About Section & Safety Info -->
+            <div class="info-section">
+                <h2>About This Tool & Safety</h2>
+                <p>Since Discord recently removed the HypeSquad quiz options directly from the settings interface, this tool serves as a simple way to change or clear your HypeSquad badge on your profile.</p>
+                <p><strong>Is this safe?</strong> Yes! This website runs 100% locally in your web browser. No server is hosting this project other than GitHub Pages serving static files. Your token is transmitted directly to Discord's official endpoints using SSL encryption. Your credentials are never stored, sent to third-parties, or logged.</p>
+            </div>
+
+            <!-- Guide Accordion -->
+            <div class="guide-accordion" id="guide-accordion">
+                <button class="guide-header" id="guide-header">
+                    <span>How to get your Discord token?</span>
+                    <svg class="guide-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="guide-content">
+                    <ol>
+                        <li>Open Discord in your browser (Chrome, Firefox, Edge, etc.) and log in.</li>
+                        <li>Press <code>F12</code> or <code>Ctrl + Shift + I</code> to open the Developer Tools.</li>
+                        <li>Click on the <strong>Network</strong> tab.</li>
+                        <li>Reload the page (press <code>F5</code>) to capture the network requests.</li>
+                        <li>In the filter box at the top, type <code>/api</code>.</li>
+                        <li>Click on any request that shows up (like <code>science</code>, <code>users</code>, or <code>profile</code>).</li>
+                        <li>Go to the <strong>Headers</strong> sub-tab and scroll down to the <strong>Request Headers</strong> section.</li>
+                        <li>Copy the entire string value of the header named <code>authorization:</code> (this is your token).</li>
+                    </ol>
+                    <div class="warning-box">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                            <line x1="12" y1="9" x2="12" y2="13"></line>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                        <span><strong>IMPORTANT WARNING:</strong> Never share your token with anyone. Having your token allows full control over your Discord account. This script communicates directly with the official Discord API.</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
