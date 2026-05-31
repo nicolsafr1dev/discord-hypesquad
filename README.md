@@ -2,6 +2,8 @@
 
 A premium, highly secure, and 100% client-side web application designed to instantly change or remove your Discord HypeSquad house badge (Bravery, Brilliance, or Balance). 
 
+👉 **Live Demo**: [nicolsafr1dev.github.io/discord-hypesquad](https://nicolsafr1dev.github.io/discord-hypesquad/)
+
 Since Discord removed the HypeSquad quiz options directly from the user settings interface in late 2025, users can no longer change or remove their HypeSquad badges natively. This utility acts as a graphical interface to interact with the remaining official Discord API endpoints.
 
 ---
