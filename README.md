@@ -32,12 +32,4 @@ Because this tool requires your Discord **Authorization Token**, safety is our h
 3. Select your desired HypeSquad house or click **Leave HypeSquad**.
 4. Confirm the success message and refresh your Discord client (`Ctrl + R` in the app or browser) to see the badge on your profile.
 
----
 
-## 📦 Static Deployment on GitHub Pages
-To host this tool online yourself for free:
-1. Create a new public repository on GitHub named `discord-hypesquad`.
-2. Push the files in this directory to your repository.
-3. Open your repository on GitHub and go to **Settings** -> **Pages**.
-4. Set the build source to **Deploy from a branch**, select `main` (or `master`) and click **Save**.
-5. Your website will be live in less than a minute at `https://<your-username>.github.io/discord-hypesquad/`!
