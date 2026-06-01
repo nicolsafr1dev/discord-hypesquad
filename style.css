@@ -218,15 +218,17 @@ input:focus {
     z-index: 1;
 }
 
-.house-badge-icon {
-    font-size: 32px;
+.house-badge-img {
+    width: 48px;
+    height: 48px;
     margin-bottom: 12px;
-    display: block;
-    transition: transform 0.3s ease;
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
 }
 
-.house-card:hover .house-badge-icon {
-    transform: scale(1.15) translateY(-2px);
+.house-card:hover .house-badge-img {
+    transform: scale(1.2) translateY(-4px);
 }
 
 .house-name {
